@@ -62,7 +62,7 @@ void RubikCube::loadFromFile(const std::string& filename) {
 
 void RubikCube::rotateFace(int faceIndex) {
    
-    std::vector<char> temp = faces[faceIndex];
+    std::vector<char> origFaceColors = faces[faceIndex];
     faces[faceIndex][0] = origFaceColors[6];
     faces[faceIndex][1] = origFaceColors[3];
     faces[faceIndex][2] = origFaceColors[0];
@@ -75,7 +75,7 @@ void RubikCube::rotateFace(int faceIndex) {
 
 
     if (faceIndex == 0) {
-        char tempFront[3] = { faces[1][0], faces[1][1], faces[1][2] };
+        char origFrontColors[3] = { faces[1][0], faces[1][1], faces[1][2] };
         faces[1][0] = faces[4][0];
         faces[1][1] = faces[4][1];
         faces[1][2] = faces[4][2];
