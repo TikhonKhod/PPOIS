@@ -85,7 +85,7 @@ void RubikCube::rotateFace(int faceIndex) {
         faces[3][8] = faces[2][6];
         faces[3][5] = faces[2][7];
         faces[3][2] = faces[2][8];
-        faces[2][6] = tempFront[0];
+        faces[2][6] = origFrontColors[0];
         faces[2][7] = origFrontColors[1];
         faces[2][8] = origFrontColors[2];
     }
